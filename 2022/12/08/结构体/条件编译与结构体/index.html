@@ -6,13 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>Archives | Hexo</title>
+  <title>Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
+  <meta name="description" content="条件编译编译器根据条件的真假决定是否编译相关的代码，     常见的条件编译有两种方法：   一、根据宏是否定义，其语法如下#ifdef        …       #else         …        #endif实例： 1234567891011#include &lt;stdio.h&gt;#define  _DEBUG_int main(int argc,char *argv[]">
+<meta property="og:type" content="article">
 <meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://example.com/archives/index.html">
+<meta property="og:url" content="http://example.com/2022/12/08/%E7%BB%93%E6%9E%84%E4%BD%93/%E6%9D%A1%E4%BB%B6%E7%BC%96%E8%AF%91%E4%B8%8E%E7%BB%93%E6%9E%84%E4%BD%93/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="条件编译编译器根据条件的真假决定是否编译相关的代码，     常见的条件编译有两种方法：   一、根据宏是否定义，其语法如下#ifdef        …       #else         …        #endif实例： 1234567891011#include &lt;stdio.h&gt;#define  _DEBUG_int main(int argc,char *argv[]">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2022-12-08T03:08:30.938Z">
+<meta property="article:modified_time" content="2022-12-08T13:25:43.721Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
   
@@ -150,112 +154,147 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-结构体/条件编译与结构体" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="条件编译"><a href="#条件编译" class="headerlink" title="条件编译"></a>条件编译</h1><p>编译器根据条件的真假决定是否编译相关的代码，<br>     常见的条件编译有两种方法：  </p>
+<h2 id="一、根据宏是否定义，其语法如下"><a href="#一、根据宏是否定义，其语法如下" class="headerlink" title="一、根据宏是否定义，其语法如下"></a>一、根据宏是否定义，其语法如下</h2><p>#ifdef <macro><br>       …<br>       #else<br>         …<br>        #endif<br>实例：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span>  _DEBUG_</span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">(<span class="type">int</span> argc,<span class="type">char</span> *argv[])</span></span><br><span class="line">&#123;</span><br><span class="line"><span class="meta">#<span class="keyword">ifdef</span> _DEBUG_  <span class="comment">//#ifndef _DEBUG_</span></span></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;hello world!\n&quot;</span>);</span><br><span class="line"><span class="meta">#<span class="keyword">else</span></span></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;welcome to china!\n&quot;</span>);</span><br><span class="line"><span class="meta">#<span class="keyword">endif</span></span></span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>#ifdef与#endif成对使用，如果宏定义了_DEBUG_则打印输出hello world!;否则打印输出welcome to china!;</p>
+<h3 id="二、根据宏的值，其语法如下"><a href="#二、根据宏的值，其语法如下" class="headerlink" title="二、根据宏的值，其语法如下"></a>二、根据宏的值，其语法如下</h3><p>#if  <macro><br> ……<br>#else<br> ……<br>#endif<br>实例：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span>  _DEBUG_ 1 </span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">(<span class="type">int</span> argc,<span class="type">char</span> *argv[])</span></span><br><span class="line">&#123;</span><br><span class="line"><span class="meta">#<span class="keyword">if</span> _DEBUG_ <span class="comment">//if _DEBUG_ == if 1; </span></span></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;hello world!\n&quot;</span>);</span><br><span class="line"><span class="meta">#<span class="keyword">else</span></span></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;welcome to china!\n&quot;</span>);</span><br><span class="line"><span class="meta">#<span class="keyword">endif</span></span></span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="结构体"><a href="#结构体" class="headerlink" title="结构体"></a>结构体</h1><h2 id="结构体的定义及用法"><a href="#结构体的定义及用法" class="headerlink" title="结构体的定义及用法"></a>结构体的定义及用法</h2><p>在实际的处理对象中，有许多信息是由多个不同类型的数据组合在一起进行描述，而且这些不同类型的数据是互相联系组成了一个有机的整体。此时，就要用到一种新的构造类型数据——结构体（structure），简称结构。结构体的使用为处理复杂的数据结构（如动态数据结构等）提供了有效的手段，而且，它们为函数间传递不同类型的数据提供了方便。<br>结构体是用户自定义的新数据类型，在结构体中可以包含若干个不同数据类型和不同意义的数据项（当然也可以相同），从而使这些数据项组合起来反映某一个信息。<br>例如，可以定义一个学生student结构体，在这个结构体中包括学号、姓名、成绩等等。这样就可以用一个结构体数据类型的变量来存放某个学生的所有相关信息。并且，用户自定义的数据类型student也可以与int、double等基本数据类型一样，用来作为定义其他变量的数据类型。<br>定义：<br>     定义一个结构体类型的一般形式为：<br>     struct  结构体名<br>    {<br>        数据类型　　　成员名1；<br>     数据类型　　　成员名2；<br>     ：<br>     数据类型　　　成员名n；<br>     }；<br>在大括号中的内容也称为“成员列表”或“域表”。其中，每个成员名的命名规则与变量名相同；数据类型可以是基本变量类型和数组类型，或者是一个结构体类型；用分号“；”作为结束符。整个结构的定义也用分号作为结束符。<br>实例：<br> <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;string.h&gt;</span></span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">student</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="type">int</span> num;</span><br><span class="line">    <span class="type">char</span> name[<span class="number">10</span>];</span><br><span class="line">    <span class="type">float</span> grade;</span><br><span class="line">&#125;stu3 = &#123;<span class="number">3</span>, <span class="string">&quot;wangwu&quot;</span>, <span class="number">98</span>&#125;, stu4 = &#123;<span class="number">4</span>, <span class="string">&quot;xiaoming&quot;</span>, <span class="number">66</span>&#125;<span class="comment">//③;</span></span><br><span class="line"><span class="type">int</span> main(<span class="type">int</span> argc,<span class="type">char</span> *argv[])</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">struct</span> student stu1;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">student</span> <span class="title">stu2</span> =</span> &#123;<span class="number">2</span>, <span class="string">&quot;lisi&quot;</span>, <span class="number">99</span>&#125;;<span class="comment">//②</span></span><br><span class="line">    stu1.num = <span class="number">1</span>;<span class="comment">//①</span></span><br><span class="line"><span class="meta">#<span class="keyword">if</span> 0</span></span><br><span class="line">    stu1.name[<span class="number">0</span>] = <span class="string">&#x27;z&#x27;</span>;</span><br><span class="line">    stu1.name[<span class="number">1</span>] = <span class="string">&#x27;h&#x27;</span>;</span><br><span class="line">    stu1.name[<span class="number">2</span>] = <span class="string">&#x27;a&#x27;</span>;</span><br><span class="line"><span class="meta">#<span class="keyword">endif</span></span></span><br><span class="line">    <span class="built_in">strcpy</span>(stu1.name,<span class="string">&quot;zhangsan&quot;</span>);</span><br><span class="line">    stu1.grade = <span class="number">80</span>;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d %s %.1f\n&quot;</span>, stu1.num, stu1.name, stu1.grade);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d %s %.1f\n&quot;</span>, stu2.num, stu2.name, stu2.grade);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d %s %.1f\n&quot;</span>, stu3.num, stu3.name, stu3.grade);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d %s %.1f\n&quot;</span>, stu4.num, stu4.name, stu4.grade);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><br> 结构体赋值的三种方式①、②、③。<br> 结构体数组<br> <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"> <span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;string.h&gt;</span></span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">student</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="type">int</span> num;</span><br><span class="line">    <span class="type">char</span> name[<span class="number">10</span>];</span><br><span class="line">    <span class="type">float</span> grade;</span><br><span class="line">&#125;s1[<span class="number">2</span>] = &#123;&#123;<span class="number">3</span>, <span class="string">&quot;hhh&quot;</span>, <span class="number">55</span>&#125;,&#123;<span class="number">4</span>, <span class="string">&quot;jjj&quot;</span>, <span class="number">68</span>&#125;&#125;;<span class="comment">//③</span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">(<span class="type">int</span> argc,<span class="type">char</span> *argv[])</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">student</span> <span class="title">s</span>[4] =</span> &#123;&#123;<span class="number">1</span>, <span class="string">&quot;zhangsan&quot;</span>, <span class="number">62</span>&#125;, &#123;<span class="number">2</span>, <span class="string">&quot;lisi&quot;</span>, <span class="number">66</span>&#125;&#125;;<span class="comment">//②</span></span><br><span class="line"><span class="meta">#<span class="keyword">if</span> 0 <span class="comment">//①</span></span></span><br><span class="line">    s[<span class="number">0</span>].num = <span class="number">1</span>;</span><br><span class="line">    <span class="built_in">strcpy</span>(s[<span class="number">0</span>].name,<span class="string">&quot;zhangsan&quot;</span>);</span><br><span class="line">    s[<span class="number">0</span>].grade = <span class="number">90</span>;</span><br><span class="line"><span class="meta">#<span class="keyword">endif</span></span></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d %s %.1f\n&quot;</span>, s[<span class="number">0</span>].num, s[<span class="number">0</span>].name, s[<span class="number">0</span>].grade);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d %s %.1f\n&quot;</span>, s[<span class="number">1</span>].num, s[<span class="number">1</span>].name, s[<span class="number">1</span>].grade);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d %s %.1f\n&quot;</span>, s1[<span class="number">0</span>].num, s1[<span class="number">0</span>].name, s1[<span class="number">0</span>].grade);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d %s %.1f\n&quot;</span>, s1[<span class="number">1</span>].num, s1[<span class="number">1</span>].name, s1[<span class="number">1</span>].grade);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><br> 赋值：①、②和③；<br> 结构体指针<br> <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">student</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="type">int</span> num;</span><br><span class="line">    <span class="type">char</span> name[<span class="number">10</span>];</span><br><span class="line">    <span class="type">float</span> grade;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">(<span class="type">int</span> argc,<span class="type">char</span> *argv[])</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">student</span> *<span class="title">p</span>;</span></span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">student</span> <span class="title">s1</span> =</span> &#123;<span class="number">1</span>, <span class="string">&quot;lisi&quot;</span>, <span class="number">65</span>&#125;;</span><br><span class="line">    p = &amp;s1;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d %s %.1f\n&quot;</span>, s1.num, s1.name, s1.grade);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d %s %.1f\n&quot;</span>, (*p).num,(*p).name,(*p).grade);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d %s %.1f\n&quot;</span>, p-&gt;num,p-&gt;name,p-&gt;grade);<span class="comment">//常用</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure></p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2022" class="archive-year">2022</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2022/12/08/%E7%BB%93%E6%9E%84%E4%BD%93/%E6%9D%A1%E4%BB%B6%E7%BC%96%E8%AF%91%E4%B8%8E%E7%BB%93%E6%9E%84%E4%BD%93/" class="archive-article-date">
-  	<time datetime="2022-12-08T03:08:30.938Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-12-08</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2022/12/08/%E7%BB%93%E6%9E%84%E4%BD%93/%E6%9D%A1%E4%BB%B6%E7%BC%96%E8%AF%91%E4%B8%8E%E7%BB%93%E6%9E%84%E4%BD%93/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2022/12/07/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" class="archive-article-date">
-  	<time datetime="2022-12-07T14:33:52.124Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-12-07</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2022/12/07/markdown/" class="archive-article-date">
-  	<time datetime="2022-12-07T13:58:45.599Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-12-07</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
+<nav id="article-nav">
+  
+  
+    <a href="/2022/12/07/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title"></div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
 
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+        
+        
+    </div>
+</aside>
+
+
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2022/12/06/hello-world/" class="archive-article-date">
-  	<time datetime="2022-12-06T15:43:53.983Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-12-06</time>
-</a>
-        </div>
-    	 
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2022/12/06/hello-world/">Hello World</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
+  
+
+  
 
 
           </div>
@@ -278,8 +317,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
