@@ -8,15 +8,15 @@
   <link rel="dns-prefetch" href="http://example.com">
   <title>顺序表 | 翔的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="线性表线性表是包含若干数据元素的一个线性序列。记为：L&#x3D;(a0,…ai-1,ai,ai+1,…an-1)L为表名，ai (0&lt;&#x3D;i&lt;&#x3D;n-1)为数据元素；n为表长，n&gt;0时，线性表L为非空表，否则为空表。线性表L可用二元组形式描述：L&#x3D;（D,R）即线性表L包含元素集合D和关系集合Rai是ai+1的直接前驱，ai+1是ai的直接后继。例：设有">
+  <meta name="description" content="线性表线性表是包含若干数据元素的一个线性序列。记为：L&#x3D;(a0,…ai-1,ai,ai+1,…an-1)">
 <meta property="og:type" content="article">
 <meta property="og:title" content="顺序表">
 <meta property="og:url" content="http://example.com/2022/12/12/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E9%A1%BA%E5%BA%8F%E8%A1%A8/index.html">
 <meta property="og:site_name" content="翔的博客">
-<meta property="og:description" content="线性表线性表是包含若干数据元素的一个线性序列。记为：L&#x3D;(a0,…ai-1,ai,ai+1,…an-1)L为表名，ai (0&lt;&#x3D;i&lt;&#x3D;n-1)为数据元素；n为表长，n&gt;0时，线性表L为非空表，否则为空表。线性表L可用二元组形式描述：L&#x3D;（D,R）即线性表L包含元素集合D和关系集合Rai是ai+1的直接前驱，ai+1是ai的直接后继。例：设有">
+<meta property="og:description" content="线性表线性表是包含若干数据元素的一个线性序列。记为：L&#x3D;(a0,…ai-1,ai,ai+1,…an-1)">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-12-12T10:32:54.000Z">
-<meta property="article:modified_time" content="2022-12-15T14:59:05.823Z">
+<meta property="article:modified_time" content="2022-12-15T15:03:45.766Z">
 <meta property="article:author" content="HHH">
 <meta property="article:tag" content="数据结构">
 <meta name="twitter:card" content="summary">
@@ -177,7 +177,9 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="线性表"><a href="#线性表" class="headerlink" title="线性表"></a>线性表</h1><p>线性表是包含若干数据元素的一个线性序列。<br>记为：L&#x3D;(a<sub>0</sub>,…a<sub>i-1</sub>,a<sub>i</sub>,a<sub>i+1</sub>,…a<sub>n-1</sub>)<br>L为表名，a<sub>i</sub> (0&lt;&#x3D;i&lt;&#x3D;n-1)为数据元素；<br>n为表长，n&gt;0时，线性表L为非空表，否则为空表。<br>线性表L可用二元组形式描述：L&#x3D;（D,R）<br>即线性表L包含元素集合D和关系集合R<br>a<sub>i</sub>是a<sub>i+1</sub>的直接前驱，a<sub>i+1</sub>是a<sub>i</sub>的直接后继。<br>例：<br>设有一个顺序表L&#x3D;{1，2，3，4，5，6}；使用二元组描述L&#x3D;(D,R)则<br>D&#x3D;{1,2,3,4,5,6}(n&#x3D;6)<br>R&#x3D;{&lt;1,2&gt;, &lt;2,3&gt;, &lt;3,4&gt;, &lt;4,5&gt;, &lt;5,6&gt;}<br><strong>线性表</strong>的特征：<br>对非空表，头无前驱，尾无后继；其他每个元素有且仅有一个前驱和一个后继。</p>
+        <h1 id="线性表"><a href="#线性表" class="headerlink" title="线性表"></a>线性表</h1><p>线性表是包含若干数据元素的一个线性序列。<br>记为：L&#x3D;(a<sub>0</sub>,…a<sub>i-1</sub>,a<sub>i</sub>,a<sub>i+1</sub>,…a<sub>n-1</sub>)</p>
+<span id="more"></span>   
+<p>L为表名，a<sub>i</sub> (0&lt;&#x3D;i&lt;&#x3D;n-1)为数据元素；<br>n为表长，n&gt;0时，线性表L为非空表，否则为空表。<br>线性表L可用二元组形式描述：L&#x3D;（D,R）<br>即线性表L包含元素集合D和关系集合R<br>a<sub>i</sub>是a<sub>i+1</sub>的直接前驱，a<sub>i+1</sub>是a<sub>i</sub>的直接后继。<br>例：<br>设有一个顺序表L&#x3D;{1，2，3，4，5，6}；使用二元组描述L&#x3D;(D,R)则<br>D&#x3D;{1,2,3,4,5,6}(n&#x3D;6)<br>R&#x3D;{&lt;1,2&gt;, &lt;2,3&gt;, &lt;3,4&gt;, &lt;4,5&gt;, &lt;5,6&gt;}<br><strong>线性表</strong>的特征：<br>对非空表，头无前驱，尾无后继；其他每个元素有且仅有一个前驱和一个后继。</p>
 <h1 id="顺序存储"><a href="#顺序存储" class="headerlink" title="顺序存储"></a>顺序存储</h1><p>顺序存储结构的表示<br>若将线性表L&#x3D;(a<sub>0</sub>,…a<sub>i-1</sub>,a<sub>i</sub>,a<sub>i+1</sub>,…a<sub>n-1</sub>)中的各元素依次存储于计算机一片连续的存储空间。<br>在C语言中，可借助于一维数组类型来描述线性表的顺序存储结构。<br>顺序存储结构的特征：<br>①逻辑上相邻的元素a<sub>i</sub>,a<sub>i+1</sub>，其存储位置也是相邻的。<br>②对数据元素a<sub>i</sub>的存取为随机存取或地址存取<br>③存储密度高(存储密度D&#x3D;(数据结构中元素所占存储空间)&#x2F;(整个数据结构所占的空间))<br>不足：对表的插入和删除等运算的时间复杂度较差  </p>
 <h1 id="顺序表-线性表的顺序存储"><a href="#顺序表-线性表的顺序存储" class="headerlink" title="顺序表(线性表的顺序存储)"></a>顺序表(线性表的顺序存储)</h1><p>顺序表的基本运算：<br>设线性表 L&#x3D;(a<sub>0</sub>,…a<sub>i-1</sub>,a<sub>i</sub>,a<sub>i+1</sub>,…a<sub>n-1</sub>)，对 L的基本运算有：<br>1)建立一个空表：list_create(L)<br>2)置空表：list_clear(L)<br>3)判断表是否为空：list_empty (L)。若表为空，返回值为1 , 否则返回 0<br>4)求表长：length (L)<br>5)取表中某个元素：GetList(L , i ), 即ai。要求0≤i≤length(L)-1<br>6)定位运算：Locate(L,x)。确定元素x在表L中的位置（或序号）<br>7)插入：<br>Insert(L,x,i)：将元素x插入到表L中第i个元素ai之前,且表长+1。<br>插入前: (a<sub>0</sub>,…a<sub>i-1</sub>,a<sub>i</sub>,a<sub>i+1</sub>,…a<sub>n-1</sub>) 0≤i≤n,i&#x3D;n时,x插入表尾<br>插入后: (a<sub>0</sub>,…a<sub>i-1</sub>,x,a<sub>i</sub>,a<sub>i+1</sub>,…a<sub>n-1</sub>)<br>8)删除：Delete(L,i)。删除表L中第i个元素ai，且表长减1, 要求0≤i≤n-1。<br>删除前：(a<sub>0</sub>,…a<sub>i-1</sub>,a<sub>i</sub>,a<sub>i+1</sub>,…a<sub>n-1</sub>)<br>删除后：(a<sub>0</sub>,…a<sub>i-1</sub>,a<sub>i+1</sub>,…a<sub>n-1</sub>)<br>9)合并：设线性表La&#x3D;(a0a1, ……,am-1), Lb&#x3D; (b0b1, ……,bn-1)，求La∪Lb &#x3D;&gt;La，<br>sqlist.h:结构体定义、提供接口(参数、返回值)、定义函数；<br>sqlist.c:功能实现<br>test.c:函数的调用<br>优点：结构清晰、软件复用<br>顺序表的实现<br>sqlist.h 结构体声明、函数声明</p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">typedef int data_t;</span></span><br><span class="line"><span class="comment">#define N 128</span></span><br><span class="line"><span class="comment">typedef sqlist_t&#123;</span></span><br><span class="line"><span class="comment">    data_t data[];</span></span><br><span class="line"><span class="comment">    int last;</span></span><br><span class="line"><span class="comment">&#125;;</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">typedef struct sqlist_t sqlist;//struct sqlist_t L; sqlist L;</span></span><br><span class="line"><span class="comment">typedef struct sqlist_t * sqlink;//struct sqlist_t * p; sqlink p;</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="type">int</span> <span class="type">data_t</span>;</span><br><span class="line"><span class="meta">#<span class="keyword">define</span> N 128 </span></span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> &#123;</span></span><br><span class="line">    <span class="type">data_t</span> data[N];</span><br><span class="line">    <span class="type">int</span> last;</span><br><span class="line">&#125;sqlist,*sqlink;</span><br><span class="line"></span><br><span class="line">sqlink <span class="title function_">list_create</span><span class="params">()</span>;<span class="comment">//创建顺序表</span></span><br><span class="line"><span class="type">int</span> <span class="title function_">list_clear</span><span class="params">(sqlink L)</span>;清空顺序表</span><br><span class="line"><span class="type">int</span> <span class="title function_">list_free</span><span class="params">(sqlink L)</span>;回收<span class="built_in">malloc</span>申请的空间</span><br><span class="line"><span class="type">int</span> <span class="title function_">list_empty</span><span class="params">(sqlink L)</span>;判断顺序表是否为空</span><br><span class="line"><span class="type">int</span> <span class="title function_">list_length</span><span class="params">(sqlink L)</span>;求顺序表的长度</span><br><span class="line"><span class="type">int</span> <span class="title function_">list_locate</span><span class="params">(sqlink L,<span class="type">data_t</span> value)</span>;</span><br><span class="line"><span class="type">int</span> <span class="title function_">list_insert</span><span class="params">(sqlink L,<span class="type">data_t</span> value,<span class="type">int</span> pos)</span>;</span><br><span class="line"><span class="type">int</span> <span class="title function_">list_delete</span><span class="params">(sqlink L, <span class="type">int</span> pos)</span>;</span><br><span class="line"><span class="type">int</span> <span class="title function_">list_merge</span><span class="params">(sqlink L1, sqlink L2)</span>;</span><br><span class="line"><span class="type">int</span> <span class="title function_">list_purge</span><span class="params">(sqlink L)</span>;</span><br><span class="line"><span class="type">int</span> <span class="title function_">list_show</span><span class="params">(sqlink L)</span>;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
@@ -295,11 +297,11 @@
   
 <nav id="article-nav">
   
-    <a href="/2022/12/12/C%E8%AF%AD%E8%A8%80/%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2022/12/12/markdown/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          内存管理
+          MarkDown
         
       </div>
     </a>
@@ -445,11 +447,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">C语言</a>
+                <a href="javascript:void(0)" class="js-tag color5">数据结构</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">数据结构</a>
+                <a href="javascript:void(0)" class="js-tag color4">C语言</a>
               </li>
              
               <li class="article-tag-list-item">
