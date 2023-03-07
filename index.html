@@ -154,6 +154,122 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-进程的创建与回收" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2023/02/12/%E8%BF%9B%E7%A8%8B%E7%9A%84%E5%88%9B%E5%BB%BA%E4%B8%8E%E5%9B%9E%E6%94%B6/">进程的创建与回收</a>
+    </h1>
+  
+
+        
+        <a href="/2023/02/12/%E8%BF%9B%E7%A8%8B%E7%9A%84%E5%88%9B%E5%BB%BA%E4%B8%8E%E5%9B%9E%E6%94%B6/" class="archive-article-date">
+  	<time datetime="2023-02-12T05:44:12.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-02-12</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-进程与线程/进程的创建与回收" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2023/02/12/%E8%BF%9B%E7%A8%8B%E4%B8%8E%E7%BA%BF%E7%A8%8B/%E8%BF%9B%E7%A8%8B%E7%9A%84%E5%88%9B%E5%BB%BA%E4%B8%8E%E5%9B%9E%E6%94%B6/">进程的创建与回收</a>
+    </h1>
+  
+
+        
+        <a href="/2023/02/12/%E8%BF%9B%E7%A8%8B%E4%B8%8E%E7%BA%BF%E7%A8%8B/%E8%BF%9B%E7%A8%8B%E7%9A%84%E5%88%9B%E5%BB%BA%E4%B8%8E%E5%9B%9E%E6%94%B6/" class="archive-article-date">
+  	<time datetime="2023-02-12T05:44:12.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-02-12</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-IO/标准IO读写" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -174,7 +290,36 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="按字符输入"><a href="#按字符输入" class="headerlink" title="按字符输入"></a>按字符输入</h2><p>下列函数用来输入一个字符(将字符输出到屏幕上)：</p>
+        <p>标准I&#x2F;O</p>
+<table>
+<thead>
+<tr>
+<th align="center"></th>
+<th align="center">fd(文件描述符)</th>
+<th align="center"></th>
+<th align="center">fp(文件指针)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">标准输出流</td>
+<td align="center">0</td>
+<td align="center">STDIN_FILENO</td>
+<td align="center">stdio</td>
+</tr>
+<tr>
+<td align="center">标准输出流</td>
+<td align="center">1</td>
+<td align="center">STDOUT_FILENO</td>
+<td align="center">stdout</td>
+</tr>
+<tr>
+<td align="center">标准错误流</td>
+<td align="center">2</td>
+<td align="center">STDERR_FILENO</td>
+<td align="center">stderr</td>
+</tr>
+</tbody></table>
+<h2 id="按字符输入"><a href="#按字符输入" class="headerlink" title="按字符输入"></a>按字符输入</h2><p>下列函数用来输入一个字符(将字符输出到屏幕上)：</p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span>  </span></span><br><span class="line"><span class="type">int</span> <span class="title function_">fgetc</span><span class="params">(FILE *stream)</span>;  </span><br><span class="line"><span class="type">int</span> <span class="title function_">getc</span><span class="params">(FILE *stream)</span>;  <span class="comment">//宏  </span></span><br><span class="line"><span class="type">int</span> <span class="title function_">getchar</span><span class="params">(<span class="type">void</span>)</span>;  只能读取键盘的输入，而不能读取文件的内容</span><br></pre></td></tr></table></figure>
 <p>注：函数的返回值是int型而不是char类型，主要是为了扩展返回值的范围。打开文件后读取，是从文件开头开始读取一个字符，读完一个字符后，读写指针会后移。调用getchar会阻塞，等待键盘的输入<br>成功时返回读取的字符；若到文件末尾或出错时返回EOF（-1）<br>getchar()等同于fgetc(stdio)，stdio也是FILE *指针，是系统定义好的。指向的是标准输入（键盘输入）。<br>getc和fgetc区别是一个是宏一个是函数<br>示例：</p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">(<span class="type">int</span> argc,<span class="type">char</span> *argv[])</span></span><br><span class="line">&#123;</span><br><span class="line">    FILE *fp;</span><br><span class="line">    <span class="type">int</span> rec;</span><br><span class="line">    fp = fopen(<span class="string">&quot;1.txt&quot;</span>,<span class="string">&quot;r&quot;</span>);</span><br><span class="line">    <span class="keyword">if</span>(fp == <span class="literal">NULL</span>)&#123;</span><br><span class="line">        perror(<span class="string">&quot;fopen&quot;</span>);</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    rec = fgetc(fp);</span><br><span class="line">    <span class="keyword">if</span>(rec == <span class="number">-1</span>)&#123;</span><br><span class="line">        perror(<span class="string">&quot;fgetc&quot;</span>);</span><br><span class="line">        fclose(fp);</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;Get char=%c\n&quot;</span>,rec);</span><br><span class="line">    fclose(fp);</span><br><span class="line">    fp = fopen(<span class="string">&quot;1.txt&quot;</span>,<span class="string">&quot;r&quot;</span>);</span><br><span class="line">    <span class="keyword">if</span>(fp == <span class="literal">NULL</span>)&#123;</span><br><span class="line">        perror(<span class="string">&quot;fopen&quot;</span>);</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    rec = fgetc(fp);</span><br><span class="line">    <span class="keyword">if</span>(rec == <span class="number">-1</span>)&#123;</span><br><span class="line">        perror(<span class="string">&quot;fgetc&quot;</span>);</span><br><span class="line">        fclose(fp);</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;Get char=%c\n&quot;</span>,rec);</span><br><span class="line">    rec = fgetc(fp);</span><br><span class="line">    <span class="keyword">if</span>(rec == <span class="number">-1</span>)&#123;</span><br><span class="line">        perror(<span class="string">&quot;fgetc&quot;</span>);</span><br><span class="line">        fclose(fp);</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;Get char=%c\n&quot;</span>,rec);</span><br><span class="line">    fclose(fp);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -224,6 +369,114 @@
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;time.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;unistd.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;string.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">(<span class="type">int</span> argc,<span class="type">char</span> *argv[])</span></span><br><span class="line">&#123;</span><br><span class="line">    FILE *fp;</span><br><span class="line">    <span class="type">time_t</span> ctime;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">tm</span> *<span class="title">ctimestr</span>;</span></span><br><span class="line">    <span class="type">int</span> linecount = <span class="number">0</span>;<span class="comment">//行号</span></span><br><span class="line">    <span class="type">char</span> buf[<span class="number">32</span>];</span><br><span class="line">    fp = fopen(<span class="string">&quot;1.txt&quot;</span>,<span class="string">&quot;a+&quot;</span>);</span><br><span class="line">    <span class="keyword">if</span>(fp == <span class="literal">NULL</span>)&#123;</span><br><span class="line">        perror(<span class="string">&quot;fopen&quot;</span>);</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//获取文件的所有行号</span></span><br><span class="line">    <span class="keyword">while</span>(fgets(buf,<span class="number">32</span>,fp) != <span class="literal">NULL</span>)&#123;</span><br><span class="line">        <span class="keyword">if</span>(buf[<span class="built_in">strlen</span>(buf)<span class="number">-1</span>] == <span class="string">&#x27;\n&#x27;</span>)&#123;<span class="comment">//判断一行是否结束</span></span><br><span class="line">            linecount++;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">while</span>(<span class="number">1</span>)&#123;</span><br><span class="line">        ctime = time(<span class="literal">NULL</span>);</span><br><span class="line">        ctimestr = localtime(&amp;ctime);<span class="comment">//转换时间 y-m-md-h-m-s</span></span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;%04d-%02d-%02d %02d:%02d:%02d\n&quot;</span>,ctimestr-&gt;tm_year+<span class="number">1900</span>,ctimestr-&gt;tm_mon+<span class="number">1</span>,ctimestr-&gt;tm_mday,ctimestr-&gt;tm_hour,ctimestr-&gt;tm_min,ctimestr-&gt;tm_sec);</span><br><span class="line">        <span class="built_in">fprintf</span>(fp,<span class="string">&quot;%d %04d-%02d-%02d %02d:%02d:%02d\n&quot;</span>,linecount,ctimestr-&gt;tm_year+<span class="number">1900</span>,ctimestr-&gt;tm_mon+<span class="number">1</span>,ctimestr-&gt;tm_mday,ctimestr-&gt;tm_hour,ctimestr-&gt;tm_min,ctimestr-&gt;tm_sec);</span><br><span class="line">        fflush(fp);<span class="comment">//写完文件记得fflush,将数据写到磁盘里去</span></span><br><span class="line">        linecount++;</span><br><span class="line">        sleep(<span class="number">1</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    fclose(fp);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">time_t time(time_t *seconds) 1970.1.1 0:0:0</span><br><span class="line">localtime()将系统时间转换成本地时间</span><br><span class="line">struct tm *localtime(const time_t *timer)</span><br><span class="line">struct tm &#123;</span><br><span class="line">   int tm_sec;         /* 秒，范围从0到59                */</span><br><span class="line">   int tm_min;         /* 分，范围从0到59                */</span><br><span class="line">   int tm_hour;        /* 小时，范围从0到23              */</span><br><span class="line">   int tm_mday;        /* 一月中的第几天，范围从1到3      */</span><br><span class="line">   int tm_mon;         /* 月份，范围从0到1               */</span><br><span class="line">   int tm_year;        /* 自1900起的年数                 */</span><br><span class="line">   int tm_wday;        /* 一周中的第几天，范围从0到6      */</span><br><span class="line">   int tm_yday;        /* 一年中的第几天，范围从0到 365   */</span><br><span class="line">   int tm_isdst;       /* 夏令时                        */    </span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 <p>注意：<br>int tm_mon;   获取的值要加1是正确的月份<br>int tm_year;  获取的值加1900是正确的年份</p>
+<h1 id="文件I-x2F-O"><a href="#文件I-x2F-O" class="headerlink" title="文件I&#x2F;O"></a>文件I&#x2F;O</h1><p>什么是文件I&#x2F;O（系统I&#x2F;O或者系统调用）？<br>文件IO是<strong>操作系统提供的API接口函数，文件IO不提供缓冲机制，每次读写操作都引起系统调用；核心概念是文件描述符；访问各种类型文件；Linux下, 标准IO基于文件IO实现。</strong><br>注：文件IO效率比标准IO效率高，标准IO函数需要封装，而文件IO则不需要封装。<br>标准IO与文件IO的API（应用程序编程接口）对比如下：</p>
+<table>
+<thead>
+<tr>
+<th align="center"></th>
+<th align="center">标准IO</th>
+<th align="left">文件IO（低级IO）</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">打开</td>
+<td align="center">fopen; freopen; fdopen</td>
+<td align="left">open</td>
+</tr>
+<tr>
+<td align="center">关闭</td>
+<td align="center">fclose</td>
+<td align="left">close</td>
+</tr>
+<tr>
+<td align="center">读</td>
+<td align="center">getc,fgetc,getchar,fgets,gets,fread</td>
+<td align="left">read</td>
+</tr>
+<tr>
+<td align="center">写</td>
+<td align="center">putc,fputc,putchar,fputs,puts,fwrite</td>
+<td align="left">write</td>
+</tr>
+</tbody></table>
+<p>注：<strong>文件IO与标准IO的函数不能混用。</strong><br>文件描述符(fd(不是指针，是0~1023的数字，表示文件))：每个打开的文件都对应一个文件描述符。文件描述符是一个非负整数。Linux为程序中每个打开的文件分配一个文件描述符。文件描述符从0开始分配，依次递增。文件IO操作通过文件描述符来完成。<br>0，1，2含义：0：标准输入流，1：标准输出流，2：标准错误流</p>
+<h2 id="open"><a href="#open" class="headerlink" title="open"></a>open</h2><p>open函数用来创建或打开一个文件:</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;sys/types.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;sys/stat.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;fcntl.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">open</span><span class="params">(<span class="type">const</span> <span class="type">char</span> *pathname, <span class="type">int</span> flags)</span>;<span class="comment">//不创建文件</span></span><br><span class="line"><span class="type">int</span> <span class="title function_">open</span><span class="params">(<span class="type">const</span> <span class="type">char</span> *pathname, <span class="type">int</span> flags, <span class="type">mode_t</span> mode)</span>;<span class="comment">//创建文件、不能创建设备文件</span></span><br></pre></td></tr></table></figure>
+<p>可以man 2 open（man 2为系统调用，man 3为函数说明）命令查看函数用法及头文件<br><strong>成功时返回文件描述符；出错时返回EOF</strong><br>打开文件时使用两个参数<br>创建文件时第三个参数指定新文件的权限，（只有在建立新文件时有效）此外真正建文件时的权限会受到umask 值影响，实际权限是mode-umaks<br>可以打开设备文件，但是不能创建设备文件（创建设备mknode 驱动部分会讲）<br><strong>参数说明(重点)：</strong></p>
+<table border="1" width="500px" cellspacing="10">
+<tr>
+  <th align="left">原型</th>
+    <td colspan="2" align="center">int open(const char *pathname, int flags, mode_t mode);
+</td>
+
+<tr>
+  <td rowspan="10" align="center">参数</td>
+  <td>pathname</td>
+  <td>被打开的文件名（包括路径）</td>
+</tr>
+<tr>
+<td rowspan="8" align="center">flags</td>
+  <td>O_RDONLY：只读方式打开文件</th>
+  <td rowspan="3" align="center">这三个参数互斥</td>
+</tr>
+<tr>
+  <td>O_WRONLY：可写方式打开文件</th>
+</tr>
+<tr>
+  <td>O_RDWR：读写方式打开文件</tr>
+<tr>
+<td> O_CREAT：如果该文件不存在，就创建一个新的文件，并用第三的参数为其设置权限</th>
+</tr>
+<tr>
+<td> O_EXCL：如果使用O_CREAT时文件存在，则可返回错误消息。这一参数可测试文件是否存在</th>
+</tr>
+<tr>
+<td>O_NOCTTY：使用本参数时，如文件为终端，那么终端不可以作为调用open()系统调用的那个进程的控制终端</th>
+</tr><tr>
+<td> O_TRUNC：如文件已经存在，那么打开文件时先删除文件中原有数据</th>
+</tr><tr>
+<td> O_APPEND：以添加方式打开文件，所以对文件的写操作都在文件的末尾进行</th>
+</tr>
+<tr>
+<td>mode</th>
+<td>被打开文件的存取权限，为8进制表示法</th>
+</tr>
+</table>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">r				O_RDONLY</span><br><span class="line">r+				O_RDWR</span><br><span class="line">w				O_WRONLY | O_CREAT | O_TRUNC, 0664</span><br><span class="line">w+				O_RDWR | O_CREAT | O_TRUNC, 0664</span><br><span class="line">a				O_WRONLY | O_CREAT | O_APPEND, 0664</span><br><span class="line">a+				O_RDWR | O_CREAT | O_APPEND, 0664</span><br></pre></td></tr></table></figure>
+<p>umask ：用来设定文件或目录的初始权限<br>文件和目录的真正初始权限<br>文件或目录的初始权限 &#x3D; 文件或目录的最大默认权限 - umask权限<br>例：0664&#x3D;0666-0002（普通用户权限&#x2F;标准IO最大权限）</p>
+<h2 id="close"><a href="#close" class="headerlink" title="close"></a>close</h2><p> close函数用来关闭一个打开的文件:<br> <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#include  &lt;unistd.h&gt;</span><br><span class="line">int  close(int fd);</span><br></pre></td></tr></table></figure><br>成功时返回0；出错时返回EOF<br>程序结束时自动关闭所有打开的文件<br><strong>文件关闭后，文件描述符不再代表文件</strong><br>示例：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;sys/types.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;sys/stat.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;fcntl.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span>  <span class="string">&lt;unistd.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">(<span class="type">int</span> argc,<span class="type">char</span> *argv[])</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> fd;</span><br><span class="line">    <span class="type">int</span> ret;</span><br><span class="line">    fd = open(<span class="string">&quot;1.txt&quot;</span>,O_WRONLY|O_CREAT|O_TRUNC, <span class="number">0666</span>);</span><br><span class="line">    <span class="keyword">if</span>(fd &lt; <span class="number">0</span>)&#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;open file err\n&quot;</span>);</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;open file success!,fd=%d\n&quot;</span>,fd);</span><br><span class="line">    ret = close(fd);</span><br><span class="line">    <span class="keyword">if</span>(ret &lt; <span class="number">0</span>)&#123;</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">&quot;close failed!\n&quot;</span>);</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    ret = close(fd);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;ret=%d\n&quot;</span>,ret);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>运行结果：<br>open file success!,fd&#x3D;3<br>ret&#x3D;-1  </p>
+<h2 id="read"><a href="#read" class="headerlink" title="read"></a>read</h2><p> read函数用来从文件中读取数据:</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span>  <span class="string">&lt;unistd.h&gt;</span></span></span><br><span class="line"><span class="type">ssize_t</span>  <span class="title function_">read</span><span class="params">(<span class="type">int</span> fd, <span class="type">void</span> *buf, <span class="type">size_t</span> count)</span>;</span><br></pre></td></tr></table></figure>
+<p>成功时返回实际读取的字节数；出错时返回EOF<br>读到文件末尾时返回0<br>buf是接收数据的缓冲区<br>count不应超过buf大小<br>write函数用来向文件写入数据:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#include  &lt;unistd.h&gt;</span><br><span class="line">ssize_t  write(int fd, void *buf, size_t count);</span><br></pre></td></tr></table></figure>
+<p>成功时返回实际写入的字节数；出错时返回EOF<br>buf是发送数据的缓冲区<br>count不应超过buf大小<br>示例：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;sys/stat.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;fcntl.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span>  <span class="string">&lt;unistd.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;string.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">(<span class="type">int</span> argc,<span class="type">char</span> *argv[])</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> fd;</span><br><span class="line">    <span class="type">int</span> ret;</span><br><span class="line">    <span class="type">char</span> buf[<span class="number">32</span>] = <span class="string">&quot;hello world&quot;</span>;</span><br><span class="line">    <span class="type">char</span> buf2[<span class="number">32</span>];</span><br><span class="line">    fd = open(<span class="string">&quot;1.txt&quot;</span>,O_RDWR|O_CREAT|O_APPEND, <span class="number">0666</span>);</span><br><span class="line">    <span class="keyword">if</span>(fd &lt; <span class="number">0</span>)&#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;open file err\n&quot;</span>);</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;success,fd=%d\n&quot;</span>,fd);</span><br><span class="line">    ret = write(fd,buf,<span class="built_in">strlen</span>(buf));</span><br><span class="line">    <span class="keyword">if</span>(ret &lt; <span class="number">1</span>)&#123;</span><br><span class="line">        perror(<span class="string">&quot;write&quot;</span>);</span><br><span class="line">        <span class="keyword">goto</span> end;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;write count=%d\n&quot;</span>,ret);</span><br><span class="line">    close(fd);</span><br><span class="line">    </span><br><span class="line">    fd = open(<span class="string">&quot;1.txt&quot;</span>,O_RDWR|O_CREAT|O_APPEND, <span class="number">0666</span>);</span><br><span class="line">    <span class="keyword">if</span>(fd &lt; <span class="number">0</span>)&#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;open file err\n&quot;</span>);</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    ret = read(fd,buf2,<span class="number">32</span>);</span><br><span class="line">    <span class="keyword">if</span>(ret &lt; <span class="number">0</span>)&#123;</span><br><span class="line">        perror(<span class="string">&quot;read&quot;</span>);</span><br><span class="line">        <span class="keyword">goto</span> end;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;read=%s\n&quot;</span>,buf2);</span><br><span class="line">end:</span><br><span class="line">    close(fd);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>运行结果（1.txt文件内容为：hello worldhello world)：<br>success,fd&#x3D;3<br>write count&#x3D;11<br>read&#x3D;hello worldhello world<br>lseek函数用来定位文件:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#include  &lt;unistd.h&gt;</span><br><span class="line">off_t  lseek(int fd, off_t offset, intt whence);</span><br></pre></td></tr></table></figure>
+<p>成功时返回当前的文件读写位置；出错时返回EOF<br>参数offset和参数whence同fseek完全一样<br>使用文件IO实现“每隔1秒向文件1.txt写入当前系统时间,行号递增”</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;time.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;unistd.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;string.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;sys/stat.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;fcntl.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">(<span class="type">int</span> argc,<span class="type">char</span> *argv[])</span></span><br><span class="line">&#123;</span><br><span class="line">    FILE *fp;</span><br><span class="line">    <span class="type">int</span> fd;</span><br><span class="line">    <span class="type">time_t</span> ctime;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">tm</span> *<span class="title">ctimestr</span>;</span></span><br><span class="line">    <span class="type">int</span> linecount = <span class="number">0</span>;</span><br><span class="line">    <span class="type">char</span> buf[<span class="number">23</span>];</span><br><span class="line">    <span class="type">int</span> ret;</span><br><span class="line">    fp = fopen(<span class="string">&quot;1.txt&quot;</span>,<span class="string">&quot;a+&quot;</span>);</span><br><span class="line">    <span class="keyword">if</span>(fp == <span class="literal">NULL</span>)&#123;</span><br><span class="line">        perror(<span class="string">&quot;fopen&quot;</span>);</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">while</span>(fgets(buf,<span class="number">32</span>,fp) != <span class="literal">NULL</span>)&#123;</span><br><span class="line">        <span class="keyword">if</span>(buf[<span class="built_in">strlen</span>(buf)<span class="number">-1</span>] == <span class="string">&#x27;\n&#x27;</span>)&#123;</span><br><span class="line">            linecount++;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    fclose(fp);</span><br><span class="line">    fd = open(<span class="string">&quot;1.txt&quot;</span>,O_RDWR|O_CREAT|O_APPEND, <span class="number">0666</span>);</span><br><span class="line">    <span class="keyword">if</span>(fd &lt; <span class="number">0</span>)&#123;</span><br><span class="line">        perror(<span class="string">&quot;fopen&quot;</span>);</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">while</span>(<span class="number">1</span>)&#123;</span><br><span class="line">        ctime = time(<span class="literal">NULL</span>);</span><br><span class="line">        ctimestr = localtime(&amp;ctime);</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;%04d-%02d-%02d %02d:%02d:%02d\n&quot;</span>,ctimestr-&gt;tm_year+<span class="number">1900</span>,ctimestr-&gt;tm_mon+<span class="number">1</span>,ctimestr-&gt;tm_mday,ctimestr-&gt;tm_hour,ctimestr-&gt;tm_min,ctimestr-&gt;tm_sec);</span><br><span class="line">        <span class="built_in">sprintf</span>(buf,<span class="string">&quot;%d %04d-%02d-%02d %02d:%02d:%02d\n&quot;</span>,linecount,ctimestr-&gt;tm_year+<span class="number">1900</span>,ctimestr-&gt;tm_mon+<span class="number">1</span>,ctimestr-&gt;tm_mday,ctimestr-&gt;tm_hour,ctimestr-&gt;tm_min,ctimestr-&gt;tm_sec);   </span><br><span class="line">        ret = write(fd,buf,<span class="built_in">strlen</span>(buf));</span><br><span class="line">        <span class="keyword">if</span>(ret &lt; <span class="number">1</span>)&#123;</span><br><span class="line">            perror(<span class="string">&quot;write&quot;</span>);</span><br><span class="line">            <span class="keyword">goto</span> end;</span><br><span class="line">        &#125;</span><br><span class="line">        linecount++;</span><br><span class="line">        sleep(<span class="number">1</span>);</span><br><span class="line">    &#125;</span><br><span class="line">end:</span><br><span class="line">    close(fd);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="目录操作"><a href="#目录操作" class="headerlink" title="目录操作"></a>目录操作</h1><p>opendir函数用来打开一个目录文件:</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span>  <span class="string">&lt;dirent.h&gt;</span></span></span><br><span class="line">DIR  *<span class="title function_">opendir</span><span class="params">(<span class="type">const</span> <span class="type">char</span> *name)</span>;</span><br><span class="line">DIR *<span class="title function_">fdopendir</span><span class="params">(<span class="type">int</span> fd)</span>; </span><br></pre></td></tr></table></figure>
+<p>使用文件描述符，要配合open函数使用<br>DIR是用来描述一个打开的目录文件的结构体类型<br>成功时返回目录流指针；出错时返回NULL<br> readdir函数用来读取目录流中的内容:<br> <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span>  <span class="string">&lt;dirent.h&gt;</span></span></span><br><span class="line"><span class="keyword">struct</span>  dirent *<span class="title function_">readdir</span><span class="params">(DIR *dirp)</span>;</span><br></pre></td></tr></table></figure><br>struct dirent是用来描述目录流中一个目录项的结构体类型<br>包含成员char  d_name[256]   参考帮助文档（man readdir）<br>成功时返回目录流dirp中下一个目录项；<br>出错或到末尾时时返回NUL<br>closedir函数用来关闭一个目录文件:<br> <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span>  <span class="string">&lt;dirent.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">closedir</span><span class="params">(DIR *dirp)</span>;</span><br></pre></td></tr></table></figure><br>成功时返回0；出错时返回EOF<br>示例：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;dirent.h&gt;</span>     </span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">(<span class="type">int</span> argc,<span class="type">char</span> *argv[])</span></span><br><span class="line">&#123;</span><br><span class="line">    DIR *dp;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">dirent</span> *<span class="title">dt</span>;</span></span><br><span class="line">    dp = opendir(<span class="string">&quot;/home/zcf/IO&quot;</span>);</span><br><span class="line">    <span class="keyword">if</span>(dp &lt; <span class="number">0</span>)&#123;</span><br><span class="line">        perror(<span class="string">&quot;opendir&quot;</span>);</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">while</span>((dt = readdir(dp)) != <span class="literal">NULL</span>)&#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;%s\n&quot;</span>,dt-&gt;d_name);</span><br><span class="line">    &#125;</span><br><span class="line">    closedir(dp);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>运行结果：列出了IO目录下的所有文件<br> chmod&#x2F;fchmod函数用来修改文件的访问权限:<br> <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span>  <span class="string">&lt;sys/stat.h&gt;</span></span></span><br><span class="line"><span class="type">int</span>  <span class="title function_">chmod</span><span class="params">(<span class="type">const</span> <span class="type">char</span> *path, <span class="type">mode_t</span> mode)</span>;</span><br><span class="line"><span class="type">int</span>  <span class="title function_">fchmod</span><span class="params">(<span class="type">int</span> fd, <span class="type">mode_t</span> mode)</span>;</span><br></pre></td></tr></table></figure><br>成功时返回0；出错时返回EOF<br>root和文件所有者能修改文件的访问权限<br>示例： chmod(“test.txt”, 0666);<br> stat&#x2F;lstat&#x2F;fstat函数用来获取文件属性:<br> <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span>  <span class="string">&lt;sys/stat.h&gt;</span></span></span><br><span class="line"><span class="type">int</span>  <span class="title function_">stat</span><span class="params">(<span class="type">const</span> <span class="type">char</span> *path, <span class="keyword">struct</span> stat *buf)</span>;</span><br><span class="line"><span class="type">int</span>  <span class="title function_">lstat</span><span class="params">(<span class="type">const</span> <span class="type">char</span> *path, <span class="keyword">struct</span> stat *buf)</span>;</span><br><span class="line"><span class="type">int</span>  <span class="title function_">fstat</span><span class="params">(<span class="type">int</span> fd, <span class="keyword">struct</span> stat *buf)</span>;</span><br></pre></td></tr></table></figure><br>成功时返回0；出错时返回EOF<br>如果path是符号链接stat获取的是目标文件的属性；而lstat获取的是链接文件的属性(读取的文件属性存放到buf里)<br><strong>drwxrwxrwx d：代表目录文件（111 111 111表示7 7 7）</strong><br>-rwxrwxrwx -:代表常规文件<br>遍历出一个目录下的所有文件</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;dirent.h&gt;</span>     </span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">(<span class="type">int</span> argc,<span class="type">char</span> *argv[])</span></span><br><span class="line">&#123;</span><br><span class="line">    DIR *dp;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">dirent</span> *<span class="title">dt</span>;</span></span><br><span class="line">    dp = opendir(<span class="string">&quot;/home/zcf/IO&quot;</span>);</span><br><span class="line">    <span class="keyword">if</span>(dp &lt; <span class="number">0</span>)&#123;</span><br><span class="line">        perror(<span class="string">&quot;opendir&quot;</span>);</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">while</span>((dt = readdir(dp)) != <span class="literal">NULL</span>)&#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;%s\n&quot;</span>,dt-&gt;d_name);</span><br><span class="line">    &#125;</span><br><span class="line">    closedir(dp);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>获取文件的权限、大小、最后一次修改的时间</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;sys/types.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;sys/stat.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;unistd.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;time.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">(<span class="type">int</span> argc,<span class="type">char</span> *argv[])</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">stat</span> <span class="title">buf</span>;</span></span><br><span class="line">    <span class="type">int</span> ret;</span><br><span class="line">    ret = stat(<span class="string">&quot;..&quot;</span>,&amp;buf);</span><br><span class="line">    <span class="keyword">if</span>(ret &lt; <span class="number">0</span>)&#123;</span><br><span class="line">        perror(<span class="string">&quot;stat&quot;</span>);</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(S_ISREG(buf.st_mode))&#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;-&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(S_ISDIR(buf.st_mode))&#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;d&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(S_ISCHR(buf.st_mode))&#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;c&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(S_ISBLK(buf.st_mode))&#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;b&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(S_ISFIFO(buf.st_mode))&#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;p&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(S_ISSOCK(buf.st_mode))&#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;s&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="type">int</span> i;</span><br><span class="line">    <span class="keyword">for</span>(i = <span class="number">8</span>;i &gt;=<span class="number">0</span>;i--)&#123;</span><br><span class="line">        <span class="keyword">if</span>(buf.st_mode &amp; (<span class="number">1</span> &lt;&lt; i))&#123;</span><br><span class="line">            <span class="keyword">switch</span>(i%<span class="number">3</span>)&#123;</span><br><span class="line">                <span class="keyword">case</span> <span class="number">2</span>:</span><br><span class="line">                    <span class="built_in">printf</span>(<span class="string">&quot;r&quot;</span>);<span class="keyword">break</span>;</span><br><span class="line">                <span class="keyword">case</span> <span class="number">1</span>:</span><br><span class="line">                    <span class="built_in">printf</span>(<span class="string">&quot;w&quot;</span>);<span class="keyword">break</span>;</span><br><span class="line">                <span class="keyword">case</span> <span class="number">0</span>:</span><br><span class="line">                    <span class="built_in">printf</span>(<span class="string">&quot;x&quot;</span>);<span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">&quot;-&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot; %d&quot;</span>,(<span class="type">int</span>)buf.st_size);</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">tm</span> *<span class="title">t</span>;</span></span><br><span class="line">    t = localtime(&amp;buf.st_ctime);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot; %d-%d-%d %d:%d&quot;</span>,t-&gt;tm_year+<span class="number">1900</span>,t-&gt;tm_mon+<span class="number">1</span>,t-&gt;tm_mday,t-&gt;tm_hour,t-&gt;tm_min);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot; ..\n&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line">zc</span><br></pre></td></tr></table></figure>
+<p>遍历一个文件夹下所有文件，并打印文件大小和日期</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span><span class="comment">//标准IO库</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;dirent.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;time.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span>  <span class="string">&lt;sys/stat.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">(<span class="type">int</span> argc,<span class="type">char</span> *argv[])</span></span><br><span class="line">&#123;</span><br><span class="line">    DIR *dp;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">dirent</span> *<span class="title">dt</span>;</span></span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">stat</span> <span class="title">buf</span>;</span></span><br><span class="line">    <span class="type">int</span> ret;</span><br><span class="line">    dp = opendir(<span class="string">&quot;/home/zcf/IO&quot;</span>);</span><br><span class="line">    <span class="keyword">if</span>(dp == <span class="literal">NULL</span>)&#123;</span><br><span class="line">        perror(<span class="string">&quot;opendir&quot;</span>);</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">while</span>((dt = readdir(dp)) != <span class="literal">NULL</span>)&#123;</span><br><span class="line">        ret = stat(dt-&gt;d_name,&amp;buf);<span class="comment">//stat(&quot;dt-&gt;d_name&quot;,&amp;buf)是错误的</span></span><br><span class="line">        <span class="keyword">if</span>(ret &lt; <span class="number">0</span>)&#123;</span><br><span class="line">            perror(<span class="string">&quot;stat&quot;</span>);</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="class"><span class="keyword">struct</span> <span class="title">tm</span> *<span class="title">t</span>;</span></span><br><span class="line">        t = localtime(&amp;buf.st_ctime);</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot; %04d-%02d-%02d %02d:%02d %d %s\n&quot;</span>,t-&gt;tm_year+<span class="number">1900</span>,t-&gt;tm_mon+<span class="number">1</span>,t-&gt;tm_mday,t-&gt;tm_hour,t-&gt;tm_min,(<span class="type">int</span>)buf.st_size,dt-&gt;d_name);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">puts</span>(<span class="string">&quot;&quot;</span>);</span><br><span class="line">    closedir(dp);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="程序库"><a href="#程序库" class="headerlink" title="程序库"></a>程序库</h2><p>库是一个二进制文件，包含的代码可被程序调用，标准C库、数学库、线程库…… 库有源码，可下载后编译；也可以直接安装二进制包。  </p>
+<h3 id="静态库"><a href="#静态库" class="headerlink" title="静态库"></a>静态库</h3><p>编译(链接)时把静态库中相关代码复制到可执行文件中，程序中已包含代码，运行时不再需要静态库。<br>优点：程序运行时无需加载库，运行速度更快<br>缺点：占用更多磁盘和内存空间；静态库升级后，程序需要重新编译链接。  </p>
+<h4 id="静态库的创建"><a href="#静态库的创建" class="headerlink" title="静态库的创建"></a>静态库的创建</h4><p>1.编写库文件代码，编译为.o目标文件。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="type">int</span>  <span class="title function_">hello</span><span class="params">()</span> &#123;</span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">&quot;hello  world\n&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>生成.o文件：gcc -c hello.c<br>2.ar 命令创建libxxx.a 文件<br>ar -rsv libxxx.a xxx.o<br>例：ar -rsv libhello.a hello.o<br>注：<strong>静态库以lib开头，后缀名为.o，没有man函数的.c文件不能生成可执行文件。</strong><br>示例：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="type">void</span> <span class="title function_">hello</span><span class="params">()</span>;</span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">(<span class="type">int</span> argc,<span class="type">char</span> *argv[])</span>&#123;</span><br><span class="line">    hello();</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>gcc -o test test.c  (编译连接命令，编译能通过)<br>连接错误（<strong>实现代码或者找到对应函数的库并且链接他</strong>）：<br>test.c:(.text+0x19): undefined reference to &#96;hello’<br>collect2: error: ld returned 1 exit status<br>含义：表示hello函数在编译的源码内没有找到实现。<br><strong>解决方法</strong>：编译test.c 并链接静态库libhello.a<br>gcc -o 目标文件 源码.c -L 路径 -lxxx<br>-L:表示库所在的路径<br>-l:库的名称<br>例：gcc -o test test.c -L. -lhello<br>.&#x2F;test<br>hello  world  </p>
+<h4 id="动态库的创建"><a href="#动态库的创建" class="headerlink" title="动态库的创建"></a>动态库的创建</h4><p>动态库的生成步骤：</p>
+<p>1.生成位置无关代码的目标文件<br> gcc  -c  -fPIC  xxx.c xxxx.c ….<br>2.生成动态库<br>   gcc  -shared -o libxxxx.so  xxx.o  xxx.o ….<br>3.编译可执行文件<br>gcc -o 目标文件 源码.c  -L路径  -lxxxx<br>执行动态库的可执行文件错误<br>.&#x2F;test: error while loading shared libraries: libmyheby.so: cannot open shared object file: No such file or directory<br>含义：可执行文件所使用的动态库找不到<br>解决办法：<br>找到动态库，添加到&#x2F;usr&#x2F;lib里面<br>或者使用export  LD_LIBRARY_PATH&#x3D;$LD_LIBRARY_PATH:你的动态库目录<br>添加在~&#x2F;.bashrc 文件里面<br>使用source ~&#x2F;.bashrc 生效。  </p>
 
       
 
@@ -748,67 +1001,10 @@
 
 
   
-    <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2022/12/06/hello-world/">Hello World</a>
-    </h1>
-  
-
-        
-        <a href="/2022/12/06/hello-world/" class="archive-article-date">
-  	<time datetime="2022-12-06T15:43:53.983Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-12-06</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-        
-          <a class="article-more-a" href="/2022/12/06/hello-world/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
+    <nav id="page-nav">
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &amp;raquo;</a>
+    </nav>
   
 
 
